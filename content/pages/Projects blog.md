@@ -23,7 +23,7 @@ lastMod: 2023-10-03
 
       + Disassembled TronXY S5 3d printer and scavenged parts
 
-        + ![IMG_20231002_221639851.jpg](/assets/img_20231002_221639851_1696332184660_0.jpg){height: 200, :width 219}
+        + ![IMG_20231002_221639851.jpg](/assets/img_20231002_221639851_1696332184660_0.jpg){:height 200, :width 219}
 
       + Ordered some motor controllers
 
