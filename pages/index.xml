@@ -3,5 +3,8 @@ MVP: A one axis slide for photography
 Requires:
 Control board
 alu frame
-Progress [[2023-10-02]] Disassembled TronXY S5 3d printer and scavenged parts { :width 219}
-+ Ordered some motor controllers + Plan for software/control + Use ESP32C3 to control both motor and camera via wifi. + Use Sony QX1 that I have to keep it light and trigger commands via wifi api from the rig controller.</description></item></channel></rss>
+Progress [[2023-10-02]] Disassembled TronXY S5 3d printer and scavenged parts
+{ :width 219} Ordered some motor controllers
+Plan for software/control
+Use ESP32C3 to control both motor and camera via wifi.
+Use Sony QX1 that I have to keep it light and trigger commands via wifi api from the rig controller.</description></item></channel></rss>
