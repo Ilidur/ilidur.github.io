@@ -23,7 +23,7 @@ lastMod: 2023-10-03
 
       + Disassembled TronXY S5 3d printer and scavenged parts
 
-![IMG_20231002_221639851.jpg](/assets/img_20231002_221639851_1696332184660_0.jpg)
+        + ![IMG_20231002_221639851.jpg](/assets/img_20231002_221639851_1696332184660_0.jpg)
 
       + Ordered some motor controllers
 
@@ -32,13 +32,3 @@ lastMod: 2023-10-03
         + Use ESP32C3 to control both motor and camera via wifi.
 
         + Use Sony QX1 that I have to keep it light and trigger commands via wifi api from the rig controller.
-
-    + 
-
-  + 
-
-  + 
-
-
-
-
