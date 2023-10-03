@@ -19,11 +19,11 @@ lastMod: 2023-10-03
 
   + ## Progress
 
-    + ### [[2023-10-02]]
+    + ### 2023-10-02
 
       + Disassembled TronXY S5 3d printer and scavenged parts
 
-        + ![IMG_20231002_221639851.jpg](/assets/img_20231002_221639851_1696332184660_0.jpg){:height 200, :width 219}
+![IMG_20231002_221639851.jpg](/assets/img_20231002_221639851_1696332184660_0.jpg)
 
       + Ordered some motor controllers
 
@@ -34,6 +34,10 @@ lastMod: 2023-10-03
         + Use Sony QX1 that I have to keep it light and trigger commands via wifi api from the rig controller.
 
     + 
+
+  + 
+
+  + 
 
 
 
