@@ -3,24 +3,277 @@ MVP: A one axis slide for photography
 Requires:
 Control board
 alu frame
-Progress 2023-10-03 Goal for today was to set up the dev environment for the controller
-The controller I&rsquo;m using is the Seeed Xiao ESP32C3
-The dev environment is a linux VM inside UTM VM environment. This posed a challenge in connecting the ESP32C3 because I had to pipe the USB."><meta name=author content="Iulian Arcus"><link rel=canonical href=https://ilidur.github.io/pages/projects-blog/><link crossorigin=anonymous href=/assets/css/stylesheet.min.49b1c3611e5e823e974d0b9b3e1101617fce26c004757161abb1a1e4af3ff85c.css integrity="sha256-SbHDYR5egj6XTQubPhEBYX/OJsAEdXFhq7Gh5K8/+Fw=" rel="preload stylesheet" as=style><script defer crossorigin=anonymous src=/assets/js/highlight.min.b95bacdc39e37a332a9f883b1e78be4abc1fdca2bc1f2641f55e3cd3dabd4d61.js integrity="sha256-uVus3DnjejMqn4g7Hni+Srwf3KK8HyZB9V4809q9TWE=" onload=hljs.initHighlightingOnLoad()></script>
+Progress 2023-10-05 On a suggestion from a hackspace member I tried scanning the camera&rsquo;s connection with wireshark. While I couldn&rsquo;t connect both the laptop and the phone with the application at the same time so I can sniff a proven app, it did volunteer SSDP packages which I wasn&rsquo;t able to request myself."><meta name=author content="Iulian Arcus"><link rel=canonical href=https://ilidur.github.io/pages/projects-blog/><link crossorigin=anonymous href=/assets/css/stylesheet.min.49b1c3611e5e823e974d0b9b3e1101617fce26c004757161abb1a1e4af3ff85c.css integrity="sha256-SbHDYR5egj6XTQubPhEBYX/OJsAEdXFhq7Gh5K8/+Fw=" rel="preload stylesheet" as=style><script defer crossorigin=anonymous src=/assets/js/highlight.min.b95bacdc39e37a332a9f883b1e78be4abc1fdca2bc1f2641f55e3cd3dabd4d61.js integrity="sha256-uVus3DnjejMqn4g7Hni+Srwf3KK8HyZB9V4809q9TWE=" onload=hljs.initHighlightingOnLoad()></script>
 <link rel=icon href=https://ilidur.github.io/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://ilidur.github.io/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://ilidur.github.io/favicon-32x32.png><link rel=apple-touch-icon href=https://ilidur.github.io/apple-touch-icon.png><link rel=mask-icon href=https://ilidur.github.io/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><meta name=generator content="Hugo 0.119.0"><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:title" content="Projects blog"><meta property="og:description" content="Focus stacking rig #projects Brief: Reuse 3D printer components to learn how to make a basic mechatronic system
 MVP: A one axis slide for photography
 Requires:
 Control board
 alu frame
-Progress 2023-10-03 Goal for today was to set up the dev environment for the controller
-The controller I&rsquo;m using is the Seeed Xiao ESP32C3
-The dev environment is a linux VM inside UTM VM environment. This posed a challenge in connecting the ESP32C3 because I had to pipe the USB."><meta property="og:type" content="article"><meta property="og:url" content="https://ilidur.github.io/pages/projects-blog/"><meta property="article:section" content="pages"><meta property="article:published_time" content="2023-10-03T00:00:00+00:00"><meta property="article:modified_time" content="2023-10-03T00:00:00+00:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Projects blog"><meta name=twitter:description content="Focus stacking rig #projects Brief: Reuse 3D printer components to learn how to make a basic mechatronic system
+Progress 2023-10-05 On a suggestion from a hackspace member I tried scanning the camera&rsquo;s connection with wireshark. While I couldn&rsquo;t connect both the laptop and the phone with the application at the same time so I can sniff a proven app, it did volunteer SSDP packages which I wasn&rsquo;t able to request myself."><meta property="og:type" content="article"><meta property="og:url" content="https://ilidur.github.io/pages/projects-blog/"><meta property="article:section" content="pages"><meta property="article:published_time" content="2023-10-03T00:00:00+00:00"><meta property="article:modified_time" content="2023-10-06T00:00:00+00:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Projects blog"><meta name=twitter:description content="Focus stacking rig #projects Brief: Reuse 3D printer components to learn how to make a basic mechatronic system
 MVP: A one axis slide for photography
 Requires:
 Control board
 alu frame
-Progress 2023-10-03 Goal for today was to set up the dev environment for the controller
-The controller I&rsquo;m using is the Seeed Xiao ESP32C3
-The dev environment is a linux VM inside UTM VM environment. This posed a challenge in connecting the ESP32C3 because I had to pipe the USB."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Pages","item":"https://ilidur.github.io/pages/"},{"@type":"ListItem","position":3,"name":"Projects blog","item":"https://ilidur.github.io/pages/projects-blog/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Projects blog","name":"Projects blog","description":"Focus stacking rig #projects Brief: Reuse 3D printer components to learn how to make a basic mechatronic system\nMVP: A one axis slide for photography\nRequires:\nControl board\nalu frame\nProgress 2023-10-03 Goal for today was to set up the dev environment for the controller\nThe controller I\u0026rsquo;m using is the Seeed Xiao ESP32C3\nThe dev environment is a linux VM inside UTM VM environment. This posed a challenge in connecting the ESP32C3 because I had to pipe the USB.","keywords":[],"articleBody":"Focus stacking rig #projects Brief: Reuse 3D printer components to learn how to make a basic mechatronic system\nMVP: A one axis slide for photography\nRequires:\nControl board\nalu frame\nProgress 2023-10-03 Goal for today was to set up the dev environment for the controller\nThe controller I’m using is the Seeed Xiao ESP32C3\nThe dev environment is a linux VM inside UTM VM environment. This posed a challenge in connecting the ESP32C3 because I had to pipe the USB. This was a setting in the Input tab of the VM config. Then I have to manually connect the USB after each load from the USB dropdown of the VM.\nGetting examples to work was not straightforward. I was using the SSD1306 OLED which had an IIC address on the back selected with resistor pins, but the OLED had a completely different address of 3C.\nSuccess!\nNext up tomorrow is to set up a wifi connection example\n2023-10-02 Disassembled TronXY S5 3d printer and scavenged parts\nOrdered some motor controllers\nPlan for software/control\nUse ESP32C3 to control both motor and camera via wifi.\nUse Sony QX1 that I have to keep it light and trigger commands via wifi api from the rig controller.\n","wordCount":"203","inLanguage":"en","datePublished":"2023-10-03T00:00:00Z","dateModified":"2023-10-03T00:00:00Z","author":{"@type":"Person","name":"Iulian Arcus"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://ilidur.github.io/pages/projects-blog/"},"publisher":{"@type":"Organization","name":"Iulian Arcus","logo":{"@type":"ImageObject","url":"https://ilidur.github.io/favicon.ico"}}}</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-00000XXXXX"></script>
+Progress 2023-10-05 On a suggestion from a hackspace member I tried scanning the camera&rsquo;s connection with wireshark. While I couldn&rsquo;t connect both the laptop and the phone with the application at the same time so I can sniff a proven app, it did volunteer SSDP packages which I wasn&rsquo;t able to request myself."><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Pages","item":"https://ilidur.github.io/pages/"},{"@type":"ListItem","position":3,"name":"Projects blog","item":"https://ilidur.github.io/pages/projects-blog/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Projects blog","name":"Projects blog","description":"Focus stacking rig #projects Brief: Reuse 3D printer components to learn how to make a basic mechatronic system\nMVP: A one axis slide for photography\nRequires:\nControl board\nalu frame\nProgress 2023-10-05 On a suggestion from a hackspace member I tried scanning the camera\u0026rsquo;s connection with wireshark. While I couldn\u0026rsquo;t connect both the laptop and the phone with the application at the same time so I can sniff a proven app, it did volunteer SSDP packages which I wasn\u0026rsquo;t able to request myself.","keywords":[],"articleBody":"Focus stacking rig #projects Brief: Reuse 3D printer components to learn how to make a basic mechatronic system\nMVP: A one axis slide for photography\nRequires:\nControl board\nalu frame\nProgress 2023-10-05 On a suggestion from a hackspace member I tried scanning the camera’s connection with wireshark. While I couldn’t connect both the laptop and the phone with the application at the same time so I can sniff a proven app, it did volunteer SSDP packages which I wasn’t able to request myself. From there I got the url for the device descriptor. Next I need to get the right api calls. HTTP/1.1 200 OK Accept-Range: none Content-Length: 2357 Content-Type: text/xml; charset=\"utf-8\" Connection: close Date: Thu, 01 Jan 1970 00:18:41 GMT Server: UPnP/1.0 MINT-X/1.8.1 \u003c?xml version=\"1.0\"?\u003e 1 0 urn:schemas-upnp-org:device:Basic:1 ILCE-6000_2 Sony Corporation http://www.sony.net/ SonyDigitalMediaServer SonyImagingDevice uuid:000000001000-1010-8000-9AF1702626E7 urn:schemas-sony-com:service:ScalarWebAPI:1 urn:schemas-sony-com:serviceId:ScalarWebAPI urn:schemas-sony-com:service:DigitalImaging:1 urn:schemas-sony-com:serviceId:DigitalImaging /DigitalImagingDesc.xml /upnp/control/DigitalImaging 1.0 guide http://192.168.122.1:8080/sony accessControl http://192.168.122.1:8080/sony camera http://192.168.122.1:8080/sony + This isn't very useful other than confirming what was already known from the timelapse app. + So I suspect my POST is malformed. I switched to reading the API and the doc recommends I call `getApplicationInfo` which didn't work. + Trying to call using cURL resulted in a successful api call! curl -X POST \\ -d '{\"method\": \"getApplicationInfo\", \"params\": [], \"id\": 1, \"version\": \"1.0\"}' \\ http://192.168.122.1:8080/sony/camera {\"result\":[\"Smart Remote Control SR\\/4.10 __SAK__\",\"2.1.4\"],\"id\":1}% + The docs say most cameras don't need this but mine does: curl -v -H \"Content-Type: application/json\" -X POST \\ -d '{\"method\": \"startRecMode\", \"params\": [], \"id\": 1, \"version\": \"1.0\"}' \\ http://192.168.122.1:8080/sony/camera Note: Unnecessary use of -X or --request, POST is already inferred. * Trying 192.168.122.1:8080... * Connected to 192.168.122.1 (192.168.122.1) port 8080 (#0) \u003e POST /sony/camera HTTP/1.1 \u003e Host: 192.168.122.1:8080 \u003e User-Agent: curl/8.1.2 \u003e Accept: */* \u003e Content-Type: application/json \u003e Content-Length: 105 \u003e \u003c HTTP/1.1 200 OK \u003c Connection: close \u003c Content-Length: 21 \u003c Content-Type: application/json \u003c * Closing connection 0 {\"result\":[0],\"id\":1}% + I'm now in live view! + I also wanted to test which header values are mandatory. So I reformulated the request to contain all the data in one line, then had to find a way to send raw TCP requests. curl -v -H \"Content-Type: application/json\" -X POST \\ -d '{\"method\": \"startRecMode\", \"params\": [], \"id\": 1, \"version\": \"1.0\"}' \\ http://192.168.122.1:8080/sony/camera Note: Unnecessary use of -X or --request, POST is already inferred. * Trying 192.168.122.1:8080... * Connected to 192.168.122.1 (192.168.122.1) port 8080 (#0) \u003e POST /sony/camera HTTP/1.1 \u003e Host: 192.168.122.1:8080 \u003e User-Agent: curl/8.1.2 \u003e Accept: */* \u003e Content-Type: application/json \u003e Content-Length: 67 \u003e \u003c HTTP/1.1 200 OK \u003c Connection: close \u003c Content-Length: 21 \u003c Content-Type: application/json \u003c * Closing connection 0 {\"result\":[0],\"id\":1}% + I found a post saying I can do it by using telnet: curl telnet://192.168.122.1:8080 \u003c\u003c\u003c 'POST /sony/camera HTTP/1.1 Host: 192.168.122.1:8080 User-Agent: curl/8.1.2 Content-Length: 67 {\"method\": \"startRecMode\", \"params\": [], \"id\": 1, \"version\": \"1.0\"}' HTTP/1.1 200 OK Connection: close Content-Length: 21 Content-Type: application/json {\"result\":[0],\"id\":1}% + After a bit of fiddling, success! I (10270) camera rig: got ip:192.168.122.131 I (10270) esp_netif_handlers: sta ip: 192.168.122.131, mask: 255.255.255.0, gw: 192.168.122.1 I (12690) camera rig: ... allocated socket I (12690) camera rig: ... connected I (12700) camera rig: ... socket send success I (12700) camera rig: ... set socket receiving timeout success HTTP/1.1 200 OK Connection: close Content-Length: 21 Content-Type: application/json {\"result\":[0],\"id\":1}I (12940) camera rig: ... done reading from socket. Last read return=0 errno=128. The trick was a \\r\\n at the end\n+ I refactored the code to call two commands, one to set up the camera and the other to take the picture with `actTakePicture` + Still waiting on motor controllers so its a good time to pause the project for a few days and rest. + ## 2023-10-04 + ### Building the combined app + I took 3 projects (i2c_oled, fast_scan and http_request) and combined them + I had to configure the platform, then build. This failed as my app was too big. I changed that in the `menuconfig` in Partition table -\u003e Single Factory App Large + OK! so i have the following functionality: + Display information + Connected to wifi and got ip! I (4268) camera rig: got ip:192.168.0.57 I (4268) esp_netif_handlers: sta ip: 192.168.0.57, mask: 255.255.255.0, gw: 192.168.0.1 + got http request! I (16312) camera rig: ... connected I (16322) camera rig: ... socket send success I (16322) camera rig: ... set socket receiving timeout success HTTP/1.0 404 Not Found Cache-Control: max-age=604800 Content-Type: text/html; charset=UTF-8 Date: Wed, 04 Oct 2023 14:28:18 GMT Expires: Wed, 11 Oct 2023 14:28:18 GMT Server: EOS (vny/044F) Vary: Accept-Encoding Content-Length: 1256 Connection: close \u003c!doctype html\u003e Example Domain Example Domain This domain is for use in illustrative examples in documents. You may use this domain in literature without prior coordination or asking for permission.\nMore information...\nI (16652) camera rig: ... done reading from socket. Last read return=0 errno=128. + The camera uses the SSDP service discovery process. This requires a UDP send/recv set up on top of the HTTP requests. The send is on a multicast address. After looking at some examples and stressing out, I remembered an old android app I used to work on https://github.com/ThibaudM/timelapse-sony that had to go through the same process. Looking at their implementation they offload the SSDP service to another app and store the addresses in a list. So I retrieved my camera's IP from there. + + ## 2023-10-03 + Goal for today was to set up the dev environment for the controller + The controller I'm using is the Seeed Xiao ESP32C3 + The dev environment is a linux VM inside UTM VM environment. This posed a challenge in connecting the ESP32C3 because I had to pipe the USB. This was a setting in the Input tab of the VM config. Then I have to manually connect the USB after each load from the USB dropdown of the VM. + Getting examples to work was not straightforward. I was using the SSD1306 OLED which had an IIC address on the back selected with resistor pins, but the OLED had a completely different address of 3C. + Success! + ![IMG_20231003_233005496.jpg](/assets/img_20231003_233005496_1696372838944_0.jpg) + Next up tomorrow is to set up a wifi connection example + ### 2023-10-02 + Disassembled TronXY S5 3d printer and scavenged parts + ![IMG_20231002_221639851.jpg](/assets/img_20231002_221639851_1696332184660_0.jpg) + Ordered some motor controllers + Plan for software/control + Use ESP32C3 to control both motor and camera via wifi. + Use Sony QX1 that I have to keep it light and trigger commands via wifi api from the rig controller. ","wordCount":"1191","inLanguage":"en","datePublished":"2023-10-03T00:00:00Z","dateModified":"2023-10-06T00:00:00Z","author":{"@type":"Person","name":"Iulian Arcus"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://ilidur.github.io/pages/projects-blog/"},"publisher":{"@type":"Organization","name":"Iulian Arcus","logo":{"@type":"ImageObject","url":"https://ilidur.github.io/favicon.ico"}}}</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-00000XXXXX"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),-gtag("config","G-00000XXXXX")</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://ilidur.github.io accesskey=h title="Iulian Arcus (Alt + H)">Iulian Arcus</a>
-<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://ilidur.github.io/categories/ title=Categories><span>Categories</span></a></li><li><a href=https://ilidur.github.io/archives/ title=Archive><span>Archive</span></a></li><li><a href=https://ilidur.github.io/search/ title="Search (Alt + /)" accesskey=/><span>Search</span></a></li><li><a href=https://ilidur.github.io/tags/ title=Tags><span>Tags</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class=post-title>Projects blog</h1><div class=post-meta><span title='2023-10-03 00:00:00 +0000 UTC'>October 3, 2023</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Iulian Arcus</div></header><div class=post-content><h1 id=focus-stacking-rig-projects>Focus stacking rig #projects<a hidden class=anchor aria-hidden=true href=#focus-stacking-rig-projects>#</a></h1><ul><li><p>Brief: Reuse 3D printer components to learn how to make a basic mechatronic system</p></li><li><p>MVP: A one axis slide for photography</p></li><li><p>Requires:</p><ul><li><p>Control board</p></li><li><p>alu frame</p></li></ul></li><li><h2 id=progress>Progress<a hidden class=anchor aria-hidden=true href=#progress>#</a></h2><ul><li><h2 id=2023-10-03>2023-10-03<a hidden class=anchor aria-hidden=true href=#2023-10-03>#</a></h2><ul><li><p>Goal for today was to set up the dev environment for the controller</p><ul><li><p>The controller I&rsquo;m using is the Seeed Xiao ESP32C3</p></li><li><p>The dev environment is a linux VM inside UTM VM environment. This posed a challenge in connecting the ESP32C3 because I had to pipe the USB. This was a setting in the Input tab of the VM config. Then I have to manually connect the USB after each load from the USB dropdown of the VM.</p></li><li><p>Getting examples to work was not straightforward. I was using the SSD1306 OLED which had an IIC address on the back selected with resistor pins, but the OLED had a completely different address of 3C.</p></li><li><p>Success!</p></li><li><p><img loading=lazy src=/assets/img_20231003_233005496_1696372838944_0.jpg alt=IMG_20231003_233005496.jpg></p></li></ul></li><li><p>Next up tomorrow is to set up a wifi connection example</p></li></ul></li><li><h3 id=2023-10-02>2023-10-02<a hidden class=anchor aria-hidden=true href=#2023-10-02>#</a></h3><ul><li><p>Disassembled TronXY S5 3d printer and scavenged parts</p><ul><li><img loading=lazy src=/assets/img_20231002_221639851_1696332184660_0.jpg alt=IMG_20231002_221639851.jpg></li></ul></li><li><p>Ordered some motor controllers</p></li><li><p>Plan for software/control</p><ul><li><p>Use ESP32C3 to control both motor and camera via wifi.</p></li><li><p>Use Sony QX1 that I have to keep it light and trigger commands via wifi api from the rig controller.</p></li></ul></li></ul></li></ul></li></ul></div><aside><h4>No notes link to this note</h4></aside><aside class=related></aside><footer class=post-footer></footer></article></main><footer class=footer><span>&copy; 2023 <a href=https://ilidur.github.io>Iulian Arcus</a></span><br><span>Powered by
+<span class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></span></div><ul id=menu><li><a href=https://ilidur.github.io/categories/ title=Categories><span>Categories</span></a></li><li><a href=https://ilidur.github.io/archives/ title=Archive><span>Archive</span></a></li><li><a href=https://ilidur.github.io/search/ title="Search (Alt + /)" accesskey=/><span>Search</span></a></li><li><a href=https://ilidur.github.io/tags/ title=Tags><span>Tags</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><h1 class=post-title>Projects blog</h1><div class=post-meta><span title='2023-10-03 00:00:00 +0000 UTC'>October 3, 2023</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;Iulian Arcus</div></header><div class=post-content><h1 id=focus-stacking-rig-projects>Focus stacking rig #projects<a hidden class=anchor aria-hidden=true href=#focus-stacking-rig-projects>#</a></h1><ul><li><p>Brief: Reuse 3D printer components to learn how to make a basic mechatronic system</p></li><li><p>MVP: A one axis slide for photography</p></li><li><p>Requires:</p><ul><li><p>Control board</p></li><li><p>alu frame</p></li></ul></li><li><h2 id=progress>Progress<a hidden class=anchor aria-hidden=true href=#progress>#</a></h2><ul><li><h2 id=2023-10-05>2023-10-05<a hidden class=anchor aria-hidden=true href=#2023-10-05>#</a></h2><ul><li>On a suggestion from a hackspace member I tried scanning the camera&rsquo;s connection with wireshark. While I couldn&rsquo;t connect both the laptop and the phone with the application at the same time so I can sniff a proven app, it did volunteer SSDP packages which I wasn&rsquo;t able to request myself. From there I got the url for the device descriptor. Next I need to get the right api calls.</li></ul></li></ul></li></ul><pre tabindex=0><code>HTTP/1.1 200 OK
+Accept-Range: none
+Content-Length: 2357
+Content-Type: text/xml; charset=&#34;utf-8&#34;
+Connection: close
+Date: Thu, 01 Jan 1970 00:18:41 GMT
+Server: UPnP/1.0 MINT-X/1.8.1
+
+&lt;?xml version=&#34;1.0&#34;?&gt;&lt;root xmlns=&#34;urn:schemas-upnp-org:device-1-0&#34;&gt;
+  &lt;specVersion&gt;
+    &lt;major&gt;1&lt;/major&gt;
+    &lt;minor&gt;0&lt;/minor&gt;
+  &lt;/specVersion&gt;
+  &lt;device&gt;
+    &lt;deviceType&gt;urn:schemas-upnp-org:device:Basic:1&lt;/deviceType&gt;
+    &lt;friendlyName&gt;ILCE-6000_2&lt;/friendlyName&gt;
+    &lt;manufacturer&gt;Sony Corporation&lt;/manufacturer&gt;
+    &lt;manufacturerURL&gt;http://www.sony.net/&lt;/manufacturerURL&gt;
+    &lt;modelDescription&gt;SonyDigitalMediaServer&lt;/modelDescription&gt;
+    &lt;modelName&gt;SonyImagingDevice&lt;/modelName&gt;
+    &lt;UDN&gt;uuid:000000001000-1010-8000-9AF1702626E7&lt;/UDN&gt;
+    &lt;serviceList&gt;
+      &lt;service&gt;
+        &lt;serviceType&gt;urn:schemas-sony-com:service:ScalarWebAPI:1&lt;/serviceType&gt;
+        &lt;serviceId&gt;urn:schemas-sony-com:serviceId:ScalarWebAPI&lt;/serviceId&gt;
+        &lt;SCPDURL/&gt;
+        &lt;controlURL/&gt;
+        &lt;eventSubURL/&gt;
+      &lt;/service&gt;
+      &lt;service&gt;
+        &lt;serviceType&gt;urn:schemas-sony-com:service:DigitalImaging:1&lt;/serviceType&gt;
+        &lt;serviceId&gt;urn:schemas-sony-com:serviceId:DigitalImaging&lt;/serviceId&gt;
+        &lt;SCPDURL&gt;/DigitalImagingDesc.xml&lt;/SCPDURL&gt;
+        &lt;controlURL&gt;/upnp/control/DigitalImaging&lt;/controlURL&gt;
+        &lt;eventSubURL&gt;&lt;/eventSubURL&gt;
+      &lt;/service&gt;
+    &lt;/serviceList&gt;
+    &lt;av:X_ScalarWebAPI_DeviceInfo xmlns:av=&#34;urn:schemas-sony-com:av&#34;&gt;
+      &lt;av:X_ScalarWebAPI_Version&gt;1.0&lt;/av:X_ScalarWebAPI_Version&gt;
+      &lt;av:X_ScalarWebAPI_ServiceList&gt;
+        &lt;av:X_ScalarWebAPI_Service&gt;
+          &lt;av:X_ScalarWebAPI_ServiceType&gt;guide&lt;/av:X_ScalarWebAPI_ServiceType&gt;
+          &lt;av:X_ScalarWebAPI_ActionList_URL&gt;http://192.168.122.1:8080/sony&lt;/av:X_ScalarWebAPI_ActionList_URL&gt;
+          &lt;av:X_ScalarWebAPI_AccessType/&gt;
+        &lt;/av:X_ScalarWebAPI_Service&gt;
+        &lt;av:X_ScalarWebAPI_Service&gt;
+          &lt;av:X_ScalarWebAPI_ServiceType&gt;accessControl&lt;/av:X_ScalarWebAPI_ServiceType&gt;
+          &lt;av:X_ScalarWebAPI_ActionList_URL&gt;http://192.168.122.1:8080/sony&lt;/av:X_ScalarWebAPI_ActionList_URL&gt;
+          &lt;av:X_ScalarWebAPI_AccessType/&gt;
+        &lt;/av:X_ScalarWebAPI_Service&gt;
+        &lt;av:X_ScalarWebAPI_Service&gt;
+          &lt;av:X_ScalarWebAPI_ServiceType&gt;camera&lt;/av:X_ScalarWebAPI_ServiceType&gt;
+          &lt;av:X_ScalarWebAPI_ActionList_URL&gt;http://192.168.122.1:8080/sony&lt;/av:X_ScalarWebAPI_ActionList_URL&gt;
+          &lt;av:X_ScalarWebAPI_AccessType/&gt;
+        &lt;/av:X_ScalarWebAPI_Service&gt;
+
+      &lt;/av:X_ScalarWebAPI_ServiceList&gt;
+    &lt;/av:X_ScalarWebAPI_DeviceInfo&gt;
+  &lt;/device&gt;
+&lt;/root&gt;
+</code></pre><pre><code>  + This isn't very useful other than confirming what was already known from the timelapse app.
+
+  + So I suspect my POST is malformed. I switched to reading the API and the doc recommends I call `getApplicationInfo` which didn't work.
+
+  + Trying to call using cURL resulted in a successful api call! 
+</code></pre><pre tabindex=0><code>curl -X POST  \
+    -d &#39;{&#34;method&#34;: &#34;getApplicationInfo&#34;,
+    &#34;params&#34;: [],                        
+    &#34;id&#34;: 1,  
+    &#34;version&#34;: &#34;1.0&#34;}&#39; \
+    http://192.168.122.1:8080/sony/camera
+{&#34;result&#34;:[&#34;Smart Remote Control SR\/4.10 __SAK__&#34;,&#34;2.1.4&#34;],&#34;id&#34;:1}%      
+</code></pre><pre><code>  + The docs say most cameras don't need this but mine does:
+</code></pre><pre tabindex=0><code>curl -v -H &#34;Content-Type: application/json&#34; -X POST  \
+    -d &#39;{&#34;method&#34;: &#34;startRecMode&#34;,
+    &#34;params&#34;: [],
+    &#34;id&#34;: 1,
+    &#34;version&#34;: &#34;1.0&#34;}&#39; \
+    http://192.168.122.1:8080/sony/camera
+
+Note: Unnecessary use of -X or --request, POST is already inferred.
+*   Trying 192.168.122.1:8080...
+* Connected to 192.168.122.1 (192.168.122.1) port 8080 (#0)
+&gt; POST /sony/camera HTTP/1.1
+&gt; Host: 192.168.122.1:8080
+&gt; User-Agent: curl/8.1.2
+&gt; Accept: */*
+&gt; Content-Type: application/json
+&gt; Content-Length: 105
+&gt; 
+&lt; HTTP/1.1 200 OK
+&lt; Connection: close
+&lt; Content-Length: 21
+&lt; Content-Type: application/json
+&lt; 
+* Closing connection 0
+{&#34;result&#34;:[0],&#34;id&#34;:1}%                                                              
+</code></pre><pre><code>  + I'm now in live view!
+
+  + I also wanted to test which header values are mandatory. So I reformulated the request to contain all the data in one line, then had to find a way to send raw TCP requests.
+</code></pre><pre tabindex=0><code>curl -v -H &#34;Content-Type: application/json&#34; -X POST  \          
+    -d &#39;{&#34;method&#34;: &#34;startRecMode&#34;, &#34;params&#34;: [], &#34;id&#34;: 1, &#34;version&#34;: &#34;1.0&#34;}&#39; \
+    http://192.168.122.1:8080/sony/camera
+
+Note: Unnecessary use of -X or --request, POST is already inferred.
+*   Trying 192.168.122.1:8080...
+* Connected to 192.168.122.1 (192.168.122.1) port 8080 (#0)
+&gt; POST /sony/camera HTTP/1.1
+&gt; Host: 192.168.122.1:8080
+&gt; User-Agent: curl/8.1.2
+&gt; Accept: */*
+&gt; Content-Type: application/json
+&gt; Content-Length: 67
+&gt; 
+&lt; HTTP/1.1 200 OK
+&lt; Connection: close
+&lt; Content-Length: 21
+&lt; Content-Type: application/json
+&lt; 
+* Closing connection 0
+{&#34;result&#34;:[0],&#34;id&#34;:1}%
+</code></pre><pre><code>  + I found a post saying I can do it by using telnet:
+</code></pre><pre tabindex=0><code>curl telnet://192.168.122.1:8080 &lt;&lt;&lt; &#39;POST /sony/camera HTTP/1.1
+Host: 192.168.122.1:8080
+User-Agent: curl/8.1.2
+Content-Length: 67
+
+{&#34;method&#34;: &#34;startRecMode&#34;, &#34;params&#34;: [], &#34;id&#34;: 1, &#34;version&#34;: &#34;1.0&#34;}&#39;
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 21
+Content-Type: application/json
+
+{&#34;result&#34;:[0],&#34;id&#34;:1}%             
+</code></pre><pre><code>  + After a bit of fiddling, success!
+</code></pre><pre tabindex=0><code>I (10270) camera rig: got ip:192.168.122.131
+I (10270) esp_netif_handlers: sta ip: 192.168.122.131, mask: 255.255.255.0, gw: 192.168.122.1
+I (12690) camera rig: ... allocated socket
+I (12690) camera rig: ... connected
+I (12700) camera rig: ... socket send success
+I (12700) camera rig: ... set socket receiving timeout success
+HTTP/1.1 200 OK
+Connection: close
+Content-Length: 21
+Content-Type: application/json
+
+{&#34;result&#34;:[0],&#34;id&#34;:1}I (12940) camera rig: ... done reading from socket. Last read return=0 errno=128.
+</code></pre><p>The trick was a <code>\r\n</code> at the end</p><pre><code>  + I refactored the code to call two commands, one to set up the camera and the other to take the picture with `actTakePicture`
+
+  + Still waiting on motor controllers so its a good time to pause the project for a few days and rest.
+
++ ## 2023-10-04
+
+  + ### Building the combined app
+
+    + I took 3 projects (i2c_oled, fast_scan and http_request) and combined them
+
+    + I had to configure the platform, then build. This failed as my app was too big. I changed that in the `menuconfig` in Partition table -&gt; Single Factory App Large
+
+    + OK! so i have the following functionality:
+
+      + Display information
+
+    + Connected to wifi and got ip!
+</code></pre><pre tabindex=0><code>I (4268) camera rig: got ip:192.168.0.57
+I (4268) esp_netif_handlers: sta ip: 192.168.0.57, mask: 255.255.255.0, gw: 192.168.0.1
+</code></pre><pre><code>    + got http request!
+</code></pre><pre tabindex=0><code>I (16312) camera rig: ... connected
+I (16322) camera rig: ... socket send success
+I (16322) camera rig: ... set socket receiving timeout success
+HTTP/1.0 404 Not Found
+Cache-Control: max-age=604800
+Content-Type: text/html; charset=UTF-8
+Date: Wed, 04 Oct 2023 14:28:18 GMT
+Expires: Wed, 11 Oct 2023 14:28:18 GMT
+Server: EOS (vny/044F)
+Vary: Accept-Encoding
+Content-Length: 1256
+Connection: close
+
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Example Domain&lt;/title&gt;
+
+    &lt;meta charset=&#34;utf-8&#34; /&gt;
+    &lt;meta http-equiv=&#34;Content-type&#34; content=&#34;text/html; charset=utf-8&#34; /&gt;
+    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1&#34; /&gt;
+    &lt;style type=&#34;text/css&#34;&gt;
+    body {
+        background-color: #f0f0f2;
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, system-ui, BlinkMacSystemFont, &#34;Segoe UI&#34;, &#34;Open Sans&#34;, &#34;Helvetica Neue&#34;, Helvetica, Arial, sans-serif;
+        
+    }
+    div {
+        width: 600px;
+        margin: 5em auto;
+        padding: 2em;
+        background-color: #fdfdff;
+        border-radius: 0.5em;
+        box-shadow: 2px 3px 7px 2px rgba(0,0,0,0.02);
+    }
+    a:link, a:visited {
+        color: #38488f;
+        text-decoration: none;
+    }
+    @media (max-width: 700px) {
+        div {
+            margin: 0 auto;
+            width: auto;
+        }
+    }
+    &lt;/style&gt;    
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;div&gt;
+    &lt;h1&gt;Example Domain&lt;/h1&gt;
+    &lt;p&gt;This domain is for use in illustrative examples in documents. You may use this
+    domain in literature without prior coordination or asking for permission.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&#34;https://www.iana.org/domains/example&#34;&gt;More information...&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+I (16652) camera rig: ... done reading from socket. Last read return=0 errno=128.
+</code></pre><pre><code>    + The camera uses the SSDP service discovery process. This requires a UDP send/recv set up on top of the HTTP requests. The send is on a multicast address. After looking at some examples and stressing out, I remembered an old android app I used to work on https://github.com/ThibaudM/timelapse-sony that had to go through the same process. Looking at their implementation they offload the SSDP service to another app and store the addresses in a list. So I retrieved my camera's IP from there.
+
+    + 
+
++ ## 2023-10-03
+
+  + Goal for today was to set up the dev environment for the controller
+
+    + The controller I'm using is the Seeed Xiao ESP32C3
+
+    + The dev environment is a linux VM inside UTM VM environment. This posed a challenge in connecting the ESP32C3 because I had to pipe the USB. This was a setting in the Input tab of the VM config. Then I have to manually connect the USB after each load from the USB dropdown of the VM.
+
+    + Getting examples to work was not straightforward. I was using the SSD1306 OLED which had an IIC address on the back selected with resistor pins, but the OLED had a completely different address of 3C.
+
+    + Success!
+
+    + ![IMG_20231003_233005496.jpg](/assets/img_20231003_233005496_1696372838944_0.jpg)
+
+  + Next up tomorrow is to set up a wifi connection example
+
++ ### 2023-10-02
+
+  + Disassembled TronXY S5 3d printer and scavenged parts
+
+    + ![IMG_20231002_221639851.jpg](/assets/img_20231002_221639851_1696332184660_0.jpg)
+
+  + Ordered some motor controllers
+
+  + Plan for software/control
+
+    + Use ESP32C3 to control both motor and camera via wifi.
+
+    + Use Sony QX1 that I have to keep it light and trigger commands via wifi api from the rig controller.</code></pre></div><aside><h4>No notes link to this note</h4></aside><aside class=related></aside><footer class=post-footer></footer></article></main><footer class=footer><span>&copy; 2023 <a href=https://ilidur.github.io>Iulian Arcus</a></span><br><span>Powered by
 <a href=https://github.com/sawhney17/logseq-schrodinger rel=noopener target=_blank>Logseq Schrödinger</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script></body></html>

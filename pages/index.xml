@@ -3,6 +3,4 @@ MVP: A one axis slide for photography
 Requires:
 Control board
 alu frame
-Progress 2023-10-03 Goal for today was to set up the dev environment for the controller
-The controller I&amp;rsquo;m using is the Seeed Xiao ESP32C3
-The dev environment is a linux VM inside UTM VM environment. This posed a challenge in connecting the ESP32C3 because I had to pipe the USB.</description></item></channel></rss>
+Progress 2023-10-05 On a suggestion from a hackspace member I tried scanning the camera&amp;rsquo;s connection with wireshark. While I couldn&amp;rsquo;t connect both the laptop and the phone with the application at the same time so I can sniff a proven app, it did volunteer SSDP packages which I wasn&amp;rsquo;t able to request myself.</description></item></channel></rss>
